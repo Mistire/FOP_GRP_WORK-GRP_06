@@ -17,7 +17,7 @@ int main() {
     cout << "Enter the ticket code: ";
     cin >> ticketCode;
 
-    if ((ticketCode==1)||(ticketCode==2)||(ticketCode==3)||(ticketCode==4)){
+    if ((ticketCode == 1) || (ticketCode == 2) || (ticketCode == 3) || (ticketCode == 4)){
     cout << "Valid ticket code.";
    }else{
        break;
@@ -25,19 +25,19 @@ int main() {
 
     i++;
 
-   }while((ticketNumber>0)||(ticketCode>0));
+   }while((ticketNumber > 0) || (ticketCode > 0));
 
    do{
-    if(ticketCode==1){
+    if(ticketCode == 1){
         fee = 10;
         infant++;
-    }else if(ticketCode==2){
+    }else if(ticketCode == 2){
         fee = 5;
         child++;
-    }else if(ticketCode==3){
+    }else if(ticketCode == 3){
         fee = 20;
         teen++;
-    }else if(ticketCode==4){
+    }else if(ticketCode == 4){
         fee = 20;
         adult++;
     }
