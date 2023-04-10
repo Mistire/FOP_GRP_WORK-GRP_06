@@ -3,7 +3,7 @@ using namespace std;
 
 int main(){
     
-    int date [8];
+    int date[8];
     int day[2];
     int month[2];
     int year[4];
@@ -28,33 +28,33 @@ int main(){
     }
     cout << endl;
     for (i = 0; i < 2;i++){
-        month[i]=date[i+2];
+        month[i] = date[i+2];
     }
     for (i = 0; i < 2;i++){
         cout << month[i];
     }
     cout << endl;
     for (i = 0; i < 4;i++){
-        year[i]= date[i+4];
+        year[i] = date[i+4];
     }
     for (i = 0; i < 4;i++){
         cout << year[i];
     }
-     int YEAR = (year[0]*1000)+(year[1]*100)+(year[2]*10)+(year[3]*1);
-     int MONTH = (month[0]*10)+(month[1]*1);
-     int DAY = (day [0]*10)+(day[1]*1);
+     int YEAR = (year[0] * 1000) + (year[1] * 100) + (year[2] * 10) + (year[3] * 1);
+     int MONTH = (month[0] * 10) + (month[1] * 1);
+     int DAY = (day [0] * 10) + (day[1] * 1);
      bool leapYear = true;
 
-    if (YEAR % 4 ==0){
+    if (YEAR % 4 == 0){
         if (YEAR % 100 != 0){
             leapYear = true;}
     else if (YEAR % 400 == 0){
-                leapYear= true;
+                leapYear = true;
     }else if (YEAR % 400 != 0){
         leapYear= false;
        }
     }else{
-        leapYear=false;
+        leapYear = false;
     }
 
     if (leapYear){
@@ -63,60 +63,76 @@ int main(){
         cout << "The year is not leap year.";
     }
 
-     if ((YEAR>=1880)&&(YEAR<=9999)){
+     if ((YEAR >= 1880) && (YEAR <= 9999)){
         cout << "The year is valid.";
-        if((MONTH>=1)&&(MONTH<=12)){
+        if ((MONTH >= 1) && (MONTH <= 12)){
             cout << "The month is valid.";
-            if(leapYear){
-                if ((MONTH==1)||(MONTH==3)||(MONTH==5)||(MONTH==7)||(MONTH==8)||(MONTH==10)||(MONTH==12)){
-                    if ((DAY>=1)&&(DAY>=31)){
+            if (leapYear){
+                if ((MONTH == 1) || (MONTH == 3) || (MONTH == 5) || (MONTH == 7) || (MONTH == 8) || (MONTH == 10) || (MONTH == 12)){
+                    if ((DAY >= 1) && (DAY >= 31)){
                       cout << "The day is valid.";
-                    }else{
+                    }
+                    else
+                    {
                       cout << "The day is not valid.";
                     }
                 }
-                else if((MONTH==4)||(MONTH==6)||(MONTH==9)||(MONTH==11)){
-                    if ((DAY>=1)&&(DAY<=30)){
+                else if ((MONTH == 4) || (MONTH == 6) || (MONTH == 9) || (MONTH == 11)){
+                    if ((DAY >= 1) && (DAY <= 30)){
                         cout << "The day is valid.";
-                    }else{
+                    }
+                    else
+                    {
                         cout << "The day is not valid.";
                     }
                 }
-                else if(MONTH==02){
-                    if((DAY>=1)&&(DAY<=29)){
+                else if (MONTH == 02){
+                    if ((DAY >= 1) && (DAY <= 29)){
                         cout << "The day is valid.";
-                    }else{
+                    }
+                    else
+                    {
                         cout << "The day is not valid.";
                     }
                 }
             }
         else  { 
-            if ((MONTH==1)||(MONTH==3)||(MONTH==5)||(MONTH==7)||(MONTH==8)||(MONTH==10)||(MONTH==12)){
-                    if ((DAY>=1)&&(DAY>=31)){
+            if ((MONTH == 1) || (MONTH == 3) || (MONTH == 5) || (MONTH == 7) || (MONTH == 8) || (MONTH == 10) || (MONTH == 12)){
+                    if ((DAY >= 1) && (DAY >= 31)){
                       cout << "The day is valid.";
-                    }else{
+                    }
+                else
+                    {
                       cout << "The day is not valid.";
                     }
                 }
-                else if((MONTH==4)||(MONTH==6)||(MONTH==9)||(MONTH==11)){
-                    if ((DAY>=1)&&(DAY<=30)){
+                else if ((MONTH == 4) || (MONTH == 6) || (MONTH == 9) || (MONTH == 11)){
+                    if ((DAY >= 1) && (DAY <= 30)){
                         cout << "The day is valid.";
-                    }else{
+                    }
+                    else
+                    {
                         cout << "The day is not valid.";
                     }
                 }
-                else if(MONTH==02){
-                    if((DAY>=1)&&(DAY<=28)){
+                else if (MONTH == 02){
+                    if ((DAY >= 1) && (DAY <= 28)){
                         cout << "The day is valid.";
-                    }else{
+                    }
+                    else
+                    {
                         cout << "The day is not valid.";
                     }
                 }
         }
-        }else{
+        } 
+        else
+        {
             cout << "The month is not valid.";
         }
-     }else{
+     }
+    else
+    {
         cout << "The year is not valid.";
      }
    return 0;
